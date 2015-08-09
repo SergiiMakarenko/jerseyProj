@@ -40,3 +40,7 @@
 .resultTable tr{
     background: lightblue;
 }
+
+.errorDiv{
+    color: red;
+}

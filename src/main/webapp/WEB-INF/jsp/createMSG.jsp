@@ -12,6 +12,25 @@
         function changePage(newPage){
             window.location = newPage;
         }
+
+        function checkForEmpty(classNameInput, classNameError ){
+            var x=0;
+            var input = document.getElementsByClassName(classNameInput);
+            var massive = document.getElementsByClassName(classNameError)
+            for(i=0;i<input.length;i++){
+                if(input[i].value==undefined || input[i].value =='') {
+                    massive[i].innerHTML = ('Can not be empty');
+
+                    x++;
+                } else{
+                    massive[i].innerHTML = ('');
+                }
+            }
+            if(x!=0){
+                return false;
+            }
+            return true;
+        }
     </script>
 
 </head>
@@ -20,13 +39,14 @@
 <div class="headDiv">Send message</div>
 
 
-<form method="post" action="/createMSG" />
+<form onsubmit="return checkForEmpty('check','errorDiv')" method="post" action="/createMSG" />
     <div>input phone number</div>
-<input type="text" name="phone">
-
+    <input class="check" type="text" name="phone">
+    <div class="errorDiv"></div>
     <BR>
     <div>input message</div>
-    <input type="textarea" name="msg">
+    <input class="check" type="textarea" name="msg">
+    <div class="errorDiv"></div>
     <BR>
     <input type="submit" value="send">
 </form>
