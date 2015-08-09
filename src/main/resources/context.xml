@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="data-context.xml"/>
+
+    <bean id="messageDaoImpl" class="com.sm.dao.MessageDaoImpl">
+        <constructor-arg ref="sessionFactory"/>
+    </bean>
+
+    <bean id="messageServiceImpl" class="com.sm.service.MessageServiceImpl">
+        <constructor-arg ref="messageDaoImpl"/>
+    </bean>
+
+</beans>

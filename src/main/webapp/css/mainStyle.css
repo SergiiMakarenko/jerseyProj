@@ -1,0 +1,42 @@
+.menuDiv{
+    display: inline-block;
+    width: 30%;
+    margin: 3px;
+    padding: 5px;
+    background: lightblue;
+    font-size: x-large;
+    color: darkblue;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.headDiv{
+    width: 30%;
+    margin: 1%;
+    background: lightgreen;
+    font-size: xx-large;
+    color: darkred;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.resultTable{
+    border-collapse: collapse;
+    margin: 5px;
+}
+.resultTable th{
+    text-align: center;
+    border: 1px solid azure;
+    padding: 5px;
+    background: blue;
+    color: aliceblue;
+}
+.resultTable td{
+    text-align: left;
+    border: 1px solid azure;
+    padding: 1px;
+    font-size: medium;
+    color: darkslategrey;
+}
+.resultTable tr{
+    background: lightblue;
+}
